@@ -7,14 +7,14 @@ $(document).ready(function(){
     console.log("hi");
 
     function result() {
-        if  (A === B && A === C) {
-        return ("Equilateral triangle")
-      } else if (A === B || A === C || B === C)  {
-        return ("Isoseles triangle")
-      } else if (A != B && A != C && B != C) {
-        return ("Scalene triangle")
-      } else if (A + B < C || B + C < A || A + C < B){
-        return ("Not a equilateral, isosceles, or scalene triangle")
+        if  (A + B <= C || B + C <= A || A + C <= B) {
+        return ("Not a Triangle")
+      } else if (A === B && A === C)  {
+        return ("Equilateral Triangle")
+      } else if  (A === B || A === C || B === C) {
+        return ("Isosceles Triangle")
+      } else if(A != B && A != C && B != C) {
+        return ("Scalene Triangle")
       } else {
         return ("null");
       }
